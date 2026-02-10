@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reliable House Furnishers | Portlaoise</title>
+
+<style>
+:root{
+  --bg:#f6f6f6;
+  --text:#111;
+  --muted:#666;
+  --card:#fff;
+  --border:#e6e6e6;
+  --shadow:0 5px 15px rgba(0,0,0,.10);
+  --radius:12px;
+  --max:1100px;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  font-family:Arial, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  background:#111;
+  color:#fff;
+  padding:22px 16px 18px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:9999;
+}
+
+header h1{margin:0; font-size:2rem;}
+header p{margin:8px 0 0; opacity:.9;}
+
+nav{
+  margin-top:16px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+nav a{
+  padding:10px 16px;
+  background:#fff;
+  color:#111;
+  border-radius:10px;
+  font-weight:800;
+  text-decoration:none;
+  border:1px solid transparent;
+  transition:background .15s ease, transform .05s ease;
+}
+
+nav a:hover{background:#f0f0f0;}
+nav a:active{transform:translateY(1px);}
+
+main{
+  max-width:var(--max);
+  margin:auto;
+  padding:28px 14px 60px;
+}
+
+/* Sections */
+.section{display:none;}
+.section.active{display:block;}
+
+/* Gallery tiles */
+.galleryGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  justify-items:center;
+  align-items:start;
+}
+
+.tile{
+  background:var(--card);
+  padding:12px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  max-width:320px;
+  width:100%;
+}
+
+.tile img,
+.tile video{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+}
+
+/* Content cards */
+.homeCard{
+  grid-column:1/-1;
+  max-width:860px;
+  margin:auto;
+  line-height:1.75;
+}
+
+.homeCard h2{margin:0 0 10px;}
+.homeCard p{margin:12px 0;}
+
+.homeCard .tagline{
+  font-weight:900;
+  margin-top:18px;
+  font-size:1.15rem;
+}
+
+.homeCard .visit{
+  margin-top:16px;
+  padding-top:12px;
+  border-top:1px solid var(--border);
+}
+
+/* Buttons */
+.btnRow{
+  margin-top:15px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:900;
+  text-decoration:none;
+  border:1px solid transparent;
+  display:inline-block;
+}
+
+.btnPrimary{background:#111;color:#fff;}
+.btnSecondary{background:#fff;color:#111;border:1px solid #ddd;}
+
+/* Section headings + intro text */
+.sectionTitle{
+  margin:0 0 10px;
+  font-size:1.5rem;
+}
+
+.sectionIntro{
+  max-width:860px;
+  margin:0 auto 18px;
+  background:#fff;
+  border-radius:var(--radius);
+  padding:16px 18px;
+  box-shadow:var(--shadow);
+  line-height:1.75;
+}
+
+.sectionIntro p{
+  margin:10px 0;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  color:var(--muted);
+  background:#fff;
+  border-top:1px solid #eee;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Reliable House Furnishers</h1>
+  <p>Station Road, Portlaoise</p>
+  <p style="margin-top:6px; font-weight:bold; display:flex; gap:12px; justify-content:center; align-items:center; flex-wrap:wrap;">
+  ☎ 057 86 21706 |
+  ✉ <a href="mailto:reliablehousefurnishers@gmail.com" style="color:#fff; text-decoration:none;">
+  reliablehousefurnishers@gmail.com</a> |
+
+  <a href="https://www.facebook.com/share/17ts8RxJQ7/?mibextid=wwXIfr" target="_blank" style="color:#fff; text-decoration:none; font-size:18px;">
+    🔵 Facebook
+  </a>
+
+  |
+
+  <a href="https://www.instagram.com/reliable_house_furnishers1969" target="_blank" style="color:#fff; text-decoration:none; font-size:18px;">
+    🟣 Instagram
+  </a>
+</p>
+
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('beds')">Beds</a>
+    <a href="#" onclick="showSection('carpets')">Carpets</a>
+    <a href="#" onclick="showSection('rugs')">Rugs</a>
+    <a href="#" onclick="showSection('flooring')">Flooring</a>
+    <a href="#" onclick="showSection('blinds')">Blinds</a>
+    <a href="#" onclick="showSection('gas')">Gas</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="section active" id="home">
+  <div class="galleryGrid">
+    <article class="tile homeCard">
+      <img src="images/billy.jpg" alt="Billy Rowan, founder of Reliable House Furnishers"
+     style="width:75%; display:block; margin:0 auto 16px; border-radius:10px;">
+
+      <h2>Welcome to Reliable House Furnishers</h2>
+
+      <p>
+        Founded by Billy Rowan in 1969, Reliable House Furnishers has been at the heart of homes in Portlaoise and beyond for over five decades.
+        What began as a small family business on Station Road grew into a trusted name for quality furniture, flooring, beds, carpets, blinds,
+        and home essentials — all under one roof.
+      </p>
+
+      <p>
+        Billy built the business on simple values: honest advice, fair prices, and looking after every customer who walked through the door.
+        Those values still guide everything we do today.
+      </p>
+
+      <p>
+        We believe your home should feel warm, comfortable, and uniquely yours. That’s why we stock an extensive range of carefully chosen pieces
+        to suit every style and every budget, from timeless classics to modern must-haves.
+      </p>
+
+      <p>
+        As a family-run business, customer care has always been at the centre of what we do. Many of our customers have been shopping with us for generations,
+        and we pride ourselves on offering the kind of personal service you simply won’t find in larger chain stores.
+      </p>
+
+      <p>
+        Whether you’re furnishing a new house, refreshing a room, choosing the perfect bed for a better night’s sleep, or finding the right carpet, rug,
+        or blind to complete a space — our experienced team is here to help you make the right choice.
+      </p>
+
+      <p>
+        Pop in, have a chat, and see why Reliable House Furnishers has been a part of local homes since 1969.
+      </p>
+
+      <p class="tagline">Everything you need to make a house a home.</p>
+
+      <p class="visit">
+        Visit us on Station Road, Portlaoise — where quality, value, and service never go out of style.
+      </p>
+
+      <div class="btnRow">
+        <a class="btn btnPrimary" href="#" onclick="showSection('beds')">Browse Beds</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('carpets')">Browse Carpets</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('rugs')">Browse Rugs</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('flooring')">Browse Flooring</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('blinds')">Browse Blinds</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('gas')">Browse Gas</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- BEDS -->
+<section class="section" id="beds">
+  <h2 class="sectionTitle">Beds</h2>
+
+  <div class="sectionIntro">
+    <p><strong>A great day starts with a great night’s sleep — and the right bed makes all the difference.</strong></p>
+    <p>
+      At Reliable House Furnishers, we stock a wide range of quality beds to suit every home, style and budget. Whether you’re looking for a supportive
+      mattress, a stylish bed frame, clever storage solutions or a full bedroom set-up, you’ll find comfort, durability and value in every option.
+    </p>
+    <p>
+      From cosy single beds to luxurious king sizes, our collection combines trusted brands with designs that bring both comfort and character to your bedroom.
+      Our team is always on hand to help you choose the perfect fit, so you can rest easy knowing you’ve made the right choice.
+    </p>
+    <p><strong>Because when you sleep better, you live better.</strong></p>
+  </div>
+
+  <div class="galleryGrid">
+    <div class="tile">
+      <video controls muted loop playsinline preload="metadata">
+        <source src="images/bed2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="tile">
+      <img src="images/beds2.jpg" alt="Beds on display in store">
+    </div>
+  </div>
+</section>
+
+<!-- CARPETS -->
+<section class="section" id="carpets">
+  <h2 class="sectionTitle">Carpets</h2>
+
+  <div class="sectionIntro">
+    <p><strong>Nothing transforms a room quite like a beautiful carpet underfoot.</strong></p>
+    <p>
+      At Reliable House Furnishers, we stock a wide selection of carpets in a variety of colours, textures and finishes to suit every home and every style.
+      Whether you’re looking for something soft and cosy for a bedroom, durable and practical for a hallway, or elegant and warm for a living space,
+      you’ll find the perfect fit here.
+    </p>
+    <p>
+      Our carpets are chosen for comfort, quality and long-lasting wear, helping to create rooms that feel warmer, quieter and more inviting.
+    </p>
+    <p><strong>Because sometimes, the finishing touch is the one you feel the most.</strong></p>
+  </div>
+
+  <div class="galleryGrid">
+    <div class="tile"><img src="images/carpets.jpg" alt="Carpet range in store"></div>
+    <div class="tile"><img src="images/carpets2.jpg" alt="Carpet styles and colours"></div>
+  </div>
+</section>
+
+<!-- RUGS -->
+<section class="section" id="rugs">
+  <h2 class="sectionTitle">Rugs</h2>
+
+  <div class="sectionIntro">
+    <p><strong>A rug is the perfect way to add warmth, colour and personality to any room.</strong></p>
+    <p>
+      Whether you want to define a space, soften wooden floors or add a stylish feature, our range of rugs offers something for every taste and budget.
+      From bold statement pieces to subtle, cosy textures, a rug can instantly transform the look and feel of your home.
+    </p>
+    <p>
+      Practical, decorative and effortlessly stylish — sometimes it’s the small touch that makes the biggest difference.
+    </p>
+  </div>
+
+  <div class="galleryGrid">
+    <div class="tile"><img src="images/rugs.jpg" alt="Rugs selection"></div>
+    <div class="tile">
+      <video controls muted loop playsinline preload="metadata" id="rugsVideo">
+        <source src="images/video-rugs.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- FLOORING -->
+<section class="section" id="flooring">
+  <h2 class="sectionTitle">Flooring</h2>
+
+  <div class="sectionIntro">
+    <p><strong>The right flooring sets the foundation for your entire home.</strong></p>
+    <p>
+      We stock a quality range of wooden floors and vinyl options that combine durability with style. Designed to withstand busy households while still
+      looking beautiful, our flooring solutions are easy to maintain and built to last.
+    </p>
+    <p>
+      Whether you prefer the timeless look of wood or the practicality of modern vinyl, you’ll find flooring that suits your space perfectly.
+    </p>
+    <p><strong>Strong, stylish and made for everyday living.</strong></p>
+  </div>
+
+  <div class="galleryGrid">
+    <div class="tile"><img src="images/flooring2.jpg" alt="Flooring options"></div>
+  </div>
+</section>
+
+<!-- BLINDS -->
+<section class="section" id="blinds">
+  <h2 class="sectionTitle">Blinds</h2>
+
+  <div class="sectionIntro">
+    <p><strong>Blinds are where style meets practicality in any room.</strong></p>
+    <p>
+      Our selection of blinds offers privacy, light control and a clean, modern finish to your windows. Available in a variety of styles and colours,
+      they are designed to complement any décor while adding a polished look to your home.
+    </p>
+    <p>
+      Simple to use and easy to maintain, blinds are a smart and stylish choice for every room.
+    </p>
+  </div>
+
+  <div class="galleryGrid">
+    <div class="tile"><img src="images/blinds.jpg" alt="Blinds selection"></div>
+  </div>
+</section>
+
+<!-- GAS -->
+<section class="section" id="gas">
+  <h2 class="sectionTitle">Gas</h2>
+
+  <div class="sectionIntro">
+    <p><strong>We stock both large and small gas cylinders for your home and outdoor needs.</strong></p>
+    <p>
+      Whether it’s for heating, cooking or barbecues, we supply reliable Ergas and Flogas cylinders at competitive prices.
+      Convenient, dependable and always in stock, we make it easy to keep your home running smoothly.
+    </p>
+    <p><strong>Practical essentials, ready when you need them.</strong></p>
+  </div>
+
+  <div class="galleryGrid">
+    <div class="tile"><img src="images/gas.jpg" alt="Gas cylinders available"></div>
+    <div class="tile"><img src="images/gas2.jpg" alt="Gas options in store"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2 class="sectionTitle">Contact</h2>
+
+  <div class="sectionIntro">
+    <p><strong>Reliable House Furnishers</strong><br>
+      Station Road, Portlaoise, Laois, R32 DA26<br>
+      Phone: <a href="tel:+353578621706">057 86 21706</a><br>
+      Email: <a href="mailto:reliablehousefurnishers@gmail.com">reliablehousefurnishers@gmail.com</a>
+    </p>
+
+<p>
+  Click the button below to email us directly with any queries and we’ll get back to you as soon as possible.
+</p>
+
+
+    <p>
+      <a class="btn btnPrimary" href="mailto:reliablehousefurnishers@gmail.com">Email Us</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Reliable House Furnishers • Station Road, Portlaoise • Since 1969
+</footer>
+
+<script>
+function stopAllVideos(){
+  document.querySelectorAll("video").forEach(v => {
+    v.pause();
+    v.currentTime = 0;
+  });
+}
+
+function showSection(id){
+  stopAllVideos();   // 👈 stops any playing video
+
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById(id);
+  if(el) el.classList.add('active');
+
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+
+
+</body>
+</html>
