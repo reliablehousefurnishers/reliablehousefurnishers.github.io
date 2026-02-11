@@ -40,6 +40,31 @@ header{
 header h1{margin:0; font-size:2rem;}
 header p{margin:8px 0 0; opacity:.9;}
 
+/* ✅ Fix ugly blue phone/email links (header + anywhere else) */
+a[href^="tel"],
+a[href^="mailto"],
+.phone-link,
+.email-link{
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+}
+a[href^="tel"]:hover,
+a[href^="mailto"]:hover,
+.phone-link:hover,
+.email-link:hover{
+  text-decoration:underline;
+}
+
+/* Optional: keep header socials white too (instead of inline styles) */
+header .social a{
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:800;
+}
+header .social a:hover{ text-decoration:underline; }
+
 nav{
   margin-top:16px;
   display:flex;
@@ -176,23 +201,18 @@ footer{
 
 <header>
   <h1>Reliable House Furnishers</h1>
-  <p>Station Road, Portlaoise</p>
-  <p style="margin-top:6px; font-weight:bold; display:flex; gap:12px; justify-content:center; align-items:center; flex-wrap:wrap;">
-  ☎ 057 86 21706 |
-  ✉ <a href="mailto:reliablehousefurnishers@gmail.com" style="color:#fff; text-decoration:none;">
-  reliablehousefurnishers@gmail.com</a> |
 
-  <a href="https://www.facebook.com/share/17ts8RxJQ7/?mibextid=wwXIfr" target="_blank" style="color:#fff; text-decoration:none; font-size:18px;">
-    🔵 Facebook
-  </a>
+  <p>
+    Station Road, Portlaoise |
+    <a href="tel:0578621706" class="phone-link">057 86 21706</a> |
+    <a href="mailto:reliablehousefurnishers@gmail.com" class="email-link">reliablehousefurnishers@gmail.com</a>
+  </p>
 
-  |
-
-  <a href="https://www.instagram.com/reliable_house_furnishers1969" target="_blank" style="color:#fff; text-decoration:none; font-size:18px;">
-    🟣 Instagram
-  </a>
-</p>
-
+  <p class="social">
+    <a href="https://www.facebook.com/share/17ts8RxJQ7/?mibextid=wwXIfr" target="_blank" rel="noopener">🔵 Facebook</a>
+    |
+    <a href="https://www.instagram.com/reliable_house_furnishers1969" target="_blank" rel="noopener">🟣 Instagram</a>
+  </p>
 
   <nav>
     <a href="#" onclick="showSection('home')">Home</a>
@@ -213,7 +233,7 @@ footer{
   <div class="galleryGrid">
     <article class="tile homeCard">
       <img src="images/billy.jpg" alt="Billy Rowan, founder of Reliable House Furnishers"
-     style="width:75%; display:block; margin:0 auto 16px; border-radius:10px;">
+           style="width:75%; display:block; margin:0 auto 16px; border-radius:10px;">
 
       <h2>Welcome to Reliable House Furnishers</h2>
 
@@ -413,10 +433,9 @@ footer{
       Email: <a href="mailto:reliablehousefurnishers@gmail.com">reliablehousefurnishers@gmail.com</a>
     </p>
 
-<p>
-  Click the button below to email us directly with any queries and we’ll get back to you as soon as possible.
-</p>
-
+    <p>
+      Click the button below to email us directly with any queries and we’ll get back to you as soon as possible.
+    </p>
 
     <p>
       <a class="btn btnPrimary" href="mailto:reliablehousefurnishers@gmail.com">Email Us</a>
@@ -439,7 +458,7 @@ function stopAllVideos(){
 }
 
 function showSection(id){
-  stopAllVideos();   // 👈 stops any playing video
+  stopAllVideos();
 
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   const el = document.getElementById(id);
@@ -449,7 +468,5 @@ function showSection(id){
 }
 </script>
 
-
 </body>
 </html>
- 
