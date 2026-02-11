@@ -38,7 +38,7 @@ header{
 }
 
 header h1{margin:0; font-size:2rem;}
-header p{margin:8px 0 0; opacity:.9;}
+header p{margin:8px 0 0; opacity:.95;}
 
 /* ✅ Fix ugly blue phone/email links (header + anywhere else) */
 a[href^="tel"],
@@ -56,7 +56,7 @@ a[href^="mailto"]:hover,
   text-decoration:underline;
 }
 
-/* Optional: keep header socials white too (instead of inline styles) */
+/* Social links in header */
 header .social a{
   color:#fff;
   text-decoration:none;
@@ -217,6 +217,8 @@ footer{
   <nav>
     <a href="#" onclick="showSection('home')">Home</a>
     <a href="#" onclick="showSection('beds')">Beds</a>
+    <a href="#" onclick="showSection('bedroom')">Bedroom Furniture</a>
+    <a href="#" onclick="showSection('wardrobes')">Wardrobes</a>
     <a href="#" onclick="showSection('carpets')">Carpets</a>
     <a href="#" onclick="showSection('rugs')">Rugs</a>
     <a href="#" onclick="showSection('flooring')">Flooring</a>
@@ -275,6 +277,8 @@ footer{
 
       <div class="btnRow">
         <a class="btn btnPrimary" href="#" onclick="showSection('beds')">Browse Beds</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('bedroom')">Bedroom Furniture</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('wardrobes')">Wardrobes</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('carpets')">Browse Carpets</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('rugs')">Browse Rugs</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('flooring')">Browse Flooring</a>
@@ -310,6 +314,57 @@ footer{
     </div>
     <div class="tile">
       <img src="images/beds2.jpg" alt="Beds on display in store">
+    </div>
+  </div>
+</section>
+
+<!-- BEDROOM FURNITURE -->
+<section class="section" id="bedroom">
+  <h2 class="sectionTitle">Bedroom Furniture (Vanity Units &amp; Dressers)</h2>
+
+  <div class="sectionIntro">
+    <p><strong>Add elegance and practicality to your bedroom with our range of vanity units and dressers.</strong></p>
+
+    <p>
+      Perfect for keeping your everyday essentials organised while creating a stylish focal point, these pieces bring both function and charm to your space.
+      Whether you prefer a classic look or a modern finish, our collection offers designs to suit every taste.
+    </p>
+
+    <p>
+      Beautifully made and built to last, our vanity units and dressers help you create a bedroom that feels calm, organised and effortlessly stylish.
+    </p>
+  </div>
+
+  <div class="galleryGrid">
+    <div class="tile"><img src="images/bedroom1.jpg" alt="Bedroom furniture: vanity units and dressers"></div>
+    <div class="tile"><img src="images/bedroom2.jpg" alt="Bedroom furniture display"></div>
+    <div class="tile"><img src="images/bedroom3.jpg" alt="Dressers and vanity units in store"></div>
+  </div>
+</section>
+
+<!-- WARDROBES -->
+<section class="section" id="wardrobes">
+  <h2 class="sectionTitle">Wardrobes</h2>
+
+  <div class="sectionIntro">
+    <p><strong>A well-designed wardrobe is the key to an organised and clutter-free bedroom.</strong></p>
+
+    <p>
+      Our range of wardrobes offers generous storage, smart shelving and stylish finishes to suit rooms of every size.
+      From sleek modern designs to timeless classics, you’ll find options that combine practicality with great design.
+    </p>
+
+    <p>
+      With plenty of space for hanging, folding and storing, our wardrobes help keep everything in its place — so your bedroom can remain a place of rest and relaxation.
+    </p>
+  </div>
+
+  <div class="galleryGrid">
+    <div class="tile"><img src="images/wardrobes.jpg" alt="Wardrobes available in store"></div>
+    <div class="tile">
+      <video controls muted loop playsinline preload="metadata">
+        <source src="images/wardrobes2.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
