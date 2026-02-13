@@ -358,7 +358,7 @@ footer{
   </div>
 </section>
 
-<!-- OUR STORY (NEW TAB) -->
+<!-- OUR STORY -->
 <section class="section" id="ourstory">
   <h2 class="sectionTitle">Our Story</h2>
 
@@ -374,6 +374,8 @@ footer{
   </div>
 
   <div class="galleryGrid">
+
+    <!-- Videos -->
     <div class="tile">
       <video controls muted loop playsinline preload="metadata">
         <source src="images/a-short-story.mp4" type="video/mp4">
@@ -386,12 +388,22 @@ footer{
       </video>
     </div>
 
+    <!-- NEW 2FM VIDEO -->
+    <div class="tile">
+      <video controls muted loop playsinline preload="metadata">
+        <source src="images/2fm-ad.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- 55 Years Image -->
     <div class="tile">
       <img src="images/55-years.jpeg" alt="Reliable House Furnishers - 55 Years">
     </div>
 
+    <!-- Articles -->
     <article class="tile homeCard" style="max-width:860px;">
       <h3 style="margin:6px 0 8px;">55 Years in the News</h3>
+
       <p style="margin:10px 0;">
         We were honoured to have our 55th anniversary featured locally. Have a read here:
       </p>
@@ -427,13 +439,30 @@ footer{
       </div>
     </article>
   </div>
-  <div style="margin-top:28px; padding-top:16px; border-top:1px solid var(--border); text-align:center; font-size:0.95rem; color:var(--muted);">
-  Proud sponsors of
-  <a href="https://howishe.ie/" target="_blank" rel="noopener" style="color:#111; font-weight:800; text-decoration:none;">
-    How Is He? Podcast
-  </a>
-</div>
+
+  <!-- Sponsorship (Subtle) -->
+  <div style="max-width:860px; margin:28px auto 0; padding-top:16px; border-top:1px solid var(--border); text-align:center;">
+
+    <div style="max-width:110px; margin:0 auto 12px;">
+      <img src="images/how-is-he.png"
+           alt="How Is He Podcast logo"
+           style="width:100%; height:auto; display:block;">
+    </div>
+
+    <div style="font-size:0.95rem; color:var(--muted);">
+      Proud sponsors of
+      <a href="https://howishe.ie/"
+         target="_blank"
+         rel="noopener"
+         style="color:#111; font-weight:800; text-decoration:none;">
+        How Is He Podcast
+      </a>
+    </div>
+
+  </div>
+
 </section>
+
 
 <!-- BEDS -->
 <section class="section" id="beds">
@@ -765,4 +794,5 @@ lightbox.addEventListener("click",()=>{
 
 </body>
 </html>
+
 
