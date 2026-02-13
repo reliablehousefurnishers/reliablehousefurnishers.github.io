@@ -121,12 +121,13 @@ main{
   display:block;
 }
 
+/* ✅ Videos: no cropping, centered */
 .tile video{
   width:100%;
   height:260px;
-  object-fit:contain;     /* ✅ no cropping */
-  object-position:center; /* ✅ keep centred */
-  background:#000;        /* ✅ tidy letterbox bars */
+  object-fit:contain;
+  object-position:center;
+  background:#000;
   border-radius:10px;
   display:block;
 }
@@ -201,6 +202,34 @@ footer{
   background:#fff;
   border-top:1px solid #eee;
 }
+
+/* ✅ Clickable images + gentle hover */
+.tile img{
+  cursor:pointer;
+  transition:transform .15s ease;
+}
+.tile img:hover{
+  transform:scale(1.02);
+}
+
+/* ✅ Lightbox */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  padding:20px;
+}
+
+.lightbox img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:12px;
+  box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
 </style>
 </head>
 
@@ -243,7 +272,7 @@ footer{
   <div class="galleryGrid">
     <article class="tile homeCard">
       <img src="images/billy.jpg" alt="Billy Rowan, founder of Reliable House Furnishers"
-           style="width:75%; display:block; margin:0 auto 16px; border-radius:10px;">
+           style="width:75%; display:block; margin:0 auto 16px; border-radius:10px; cursor:default;">
 
       <h2>Welcome to Reliable House Furnishers</h2>
 
@@ -327,7 +356,7 @@ footer{
   </div>
 </section>
 
-<!-- SOFAS & SEATING (NEW TAB) -->
+<!-- SOFAS & SEATING -->
 <section class="section" id="sofas">
   <h2 class="sectionTitle">Sofas &amp; Seating</h2>
 
@@ -542,6 +571,11 @@ footer{
   Reliable House Furnishers • Station Road, Portlaoise • Since 1969
 </footer>
 
+<!-- ✅ Lightbox overlay -->
+<div class="lightbox" id="lightbox">
+  <img id="lightboxImg" src="" alt="Enlarged image">
+</div>
+
 <script>
 function stopAllVideos(){
   document.querySelectorAll("video").forEach(v => {
@@ -559,8 +593,29 @@ function showSection(id){
 
   window.scrollTo({top:0, behavior:'smooth'});
 }
+
+/* ✅ LIGHTBOX (click any image to enlarge) */
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+
+function bindLightbox(){
+  document.querySelectorAll(".tile img").forEach(img=>{
+    if(img.dataset.lbBound) return;   // prevent double-binding
+    img.dataset.lbBound = "1";
+    img.addEventListener("click",()=>{
+      lightbox.style.display="flex";
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || "Enlarged image";
+    });
+  });
+}
+bindLightbox();
+
+lightbox.addEventListener("click",()=>{
+  lightbox.style.display="none";
+  lightboxImg.src="";
+});
 </script>
 
 </body>
 </html>
-
