@@ -113,11 +113,20 @@ main{
   width:100%;
 }
 
-.tile img,
-.tile video{
+.tile img{
   width:100%;
   height:260px;
   object-fit:cover;
+  border-radius:10px;
+  display:block;
+}
+
+.tile video{
+  width:100%;
+  height:260px;
+  object-fit:contain;     /* ✅ no cropping */
+  object-position:center; /* ✅ keep centred */
+  background:#000;        /* ✅ tidy letterbox bars */
   border-radius:10px;
   display:block;
 }
@@ -554,3 +563,4 @@ function showSection(id){
 
 </body>
 </html>
+
