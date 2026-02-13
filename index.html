@@ -32,7 +32,7 @@ header{
   color:#fff;
   padding:22px 16px 18px;
   text-align:center;
-  position:static; /* was sticky */
+  position:static;
 }
 
 header h1{margin:0; font-size:2rem;}
@@ -242,6 +242,23 @@ footer{
 .sectionIntro a[href^="mailto"]:hover{
   text-decoration:underline;
 }
+
+/* ✅ Our Story links look tidy */
+.articleLinks{
+  margin:10px 0 0;
+  padding-left:18px;
+}
+.articleLinks li{
+  margin:8px 0;
+}
+.articleLinks a{
+  color:#111;
+  font-weight:900;
+  text-decoration:none;
+}
+.articleLinks a:hover{
+  text-decoration:underline;
+}
 </style>
 </head>
 
@@ -264,6 +281,7 @@ footer{
 
   <nav>
     <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('ourstory')">Our Story</a>
     <a href="#" onclick="showSection('beds')">Beds</a>
     <a href="#" onclick="showSection('sofas')">Sofas &amp; Seating</a>
     <a href="#" onclick="showSection('bedroom')">Bedroom Furniture</a>
@@ -325,7 +343,8 @@ footer{
       </p>
 
       <div class="btnRow">
-        <a class="btn btnPrimary" href="#" onclick="showSection('beds')">Browse Beds</a>
+        <a class="btn btnPrimary" href="#" onclick="showSection('ourstory')">Our Story</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('beds')">Browse Beds</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('sofas')">Sofas &amp; Seating</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('bedroom')">Bedroom Furniture</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('wardrobes')">Wardrobes</a>
@@ -334,6 +353,77 @@ footer{
         <a class="btn btnSecondary" href="#" onclick="showSection('flooring')">Browse Flooring</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('blinds')">Browse Blinds</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('gas')">Browse Gas</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- OUR STORY (NEW TAB) -->
+<section class="section" id="ourstory">
+  <h2 class="sectionTitle">Our Story</h2>
+
+  <div class="sectionIntro">
+    <p><strong>Reliable House Furnishers has been part of Portlaoise life since 1969.</strong></p>
+    <p>
+      From a small family business on Station Road to a trusted name for furniture, beds, flooring, carpets and blinds —
+      we’re proud of the generations of customers who’ve supported us along the way.
+    </p>
+    <p>
+      Here’s a little look back at our story, and a few articles that celebrated our 55 years in business.
+    </p>
+  </div>
+
+  <div class="galleryGrid">
+    <div class="tile">
+      <video controls muted loop playsinline preload="metadata">
+        <source src="images/a-short-story.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="tile">
+      <video controls muted loop playsinline preload="metadata">
+        <source src="images/rhf-ad.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="tile">
+      <img src="images/55-years.jpeg" alt="Reliable House Furnishers - 55 Years">
+    </div>
+
+    <article class="tile homeCard" style="max-width:860px;">
+      <h3 style="margin:6px 0 8px;">55 Years in the News</h3>
+      <p style="margin:10px 0;">
+        We were honoured to have our 55th anniversary featured locally. Have a read here:
+      </p>
+
+      <ul class="articleLinks">
+        <li>
+          <a href="https://www.leinsterexpress.ie/news/portlaoise-/1650776/fifty-five-years-of-furnishing-laois-portlaoise-family-celebrate-business-milestone.html"
+             target="_blank" rel="noopener">
+            Leinster Express — Fifty-five years of furnishing Laois
+          </a>
+        </li>
+        <li>
+          <a href="http://midlands103.com/news/news-businessnews/furniture-shop-proudly-celebrates-55th-anniversary-today/"
+             target="_blank" rel="noopener">
+            Midlands 103 — Proudly celebrates 55th anniversary
+          </a>
+        </li>
+        <li>
+          <a href="https://www.laois-nationalist.ie/news/portlaoise-family-store-marks-55-years-in-business_arid-37157.html"
+             target="_blank" rel="noopener">
+            Laois Nationalist — Portlaoise family store marks 55 years
+          </a>
+        </li>
+      </ul>
+
+      <div class="btnRow" style="margin-top:16px;">
+        <a class="btn btnPrimary"
+           href="https://www.google.com/maps/search/?api=1&query=Reliable+House+Furnishers+Station+Road+Portlaoise+R32+DA26"
+           target="_blank" rel="noopener">
+          Visit Us / Get Directions
+        </a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('contact')">Contact Us</a>
       </div>
     </article>
   </div>
@@ -556,7 +646,7 @@ footer{
   </div>
 </section>
 
-<!-- CONTACT (UPDATED: phone, email, hours, directions + map) -->
+<!-- CONTACT (UPDATED) -->
 <section class="section" id="contact">
   <h2 class="sectionTitle">Contact</h2>
 
@@ -637,6 +727,9 @@ function showSection(id){
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   const el = document.getElementById(id);
   if(el) el.classList.add('active');
+
+  // Rebind lightbox images when switching tabs (in case content loads later)
+  bindLightbox();
 
   window.scrollTo({top:0, behavior:'smooth'});
 }
