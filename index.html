@@ -15,10 +15,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Reliable House Furnishers | Portlaoise</title>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Reliable House Furnishers | Portlaoise</title>
-
 <style>
 :root{
   --bg:#f6f6f6;
@@ -68,15 +64,39 @@ a[href^="mailto"]:hover,
   text-decoration:underline;
 }
 
-/* Social links in header */
-header .social a{
-  color:#fff;
-  text-decoration:none;
-  font-size:18px;
-  font-weight:800;
+/* ✅ Social icons in header */
+header .social{
+  margin-top:10px;
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  align-items:center;
 }
-header .social a:hover{ text-decoration:underline; }
+header .social a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.06);
+  text-decoration:none;
+  transition:transform .08s ease, background .15s ease, border-color .15s ease;
+}
+header .social a:hover{
+  background:rgba(255,255,255,.12);
+  border-color:rgba(255,255,255,.32);
+  transform:translateY(-1px);
+}
+header .social svg{
+  width:20px;
+  height:20px;
+  display:block;
+  fill:#fff;
+}
 
+/* NAV */
 nav{
   margin-top:16px;
   display:flex;
@@ -94,10 +114,32 @@ nav a{
   text-decoration:none;
   border:1px solid transparent;
   transition:background .15s ease, transform .05s ease;
+  font-size:16px;
+  line-height:1;
+  white-space:nowrap;
 }
 
 nav a:hover{background:#f0f0f0;}
 nav a:active{transform:translateY(1px);}
+
+/* ✅ Make tabs smaller + nicer on phones */
+@media (max-width: 700px){
+  nav{
+    flex-wrap:nowrap;               /* stop chunky wrapping */
+    overflow-x:auto;                /* allow swipe */
+    -webkit-overflow-scrolling:touch;
+    justify-content:flex-start;
+    gap:8px;
+    padding:0 6px 8px;
+    margin-top:14px;
+  }
+  nav::-webkit-scrollbar{height:6px;}
+  nav a{
+    padding:8px 12px;               /* slimmer */
+    border-radius:9px;
+    font-size:14px;                 /* smaller text */
+  }
+}
 
 main{
   max-width:var(--max);
@@ -291,11 +333,22 @@ footer{
     <a href="mailto:reliablehousefurnishers@gmail.com" class="email-link">reliablehousefurnishers@gmail.com</a>
   </p>
 
-  <p class="social">
-    <a href="https://www.facebook.com/share/17ts8RxJQ7/?mibextid=wwXIfr" target="_blank" rel="noopener">🔵 Facebook</a>
-    |
-    <a href="https://www.instagram.com/reliable_house_furnishers1969" target="_blank" rel="noopener">🟣 Instagram</a>
-  </p>
+  <!-- ✅ ICON LOGOS instead of words -->
+  <div class="social" aria-label="Social links">
+    <a href="https://www.facebook.com/share/17ts8RxJQ7/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+      <!-- Facebook SVG -->
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.23 10.44 22v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.62.77-1.62 1.56v1.88h2.76l-.44 2.91h-2.32V22C18.34 21.23 22 17.08 22 12.06z"/>
+      </svg>
+    </a>
+
+    <a href="https://www.instagram.com/reliable_house_furnishers1969" target="_blank" rel="noopener" aria-label="Instagram">
+      <!-- Instagram SVG -->
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.75 2h8.5C19.42 2 22 4.58 22 7.75v8.5C22 19.42 19.42 22 16.25 22h-8.5C4.58 22 2 19.42 2 16.25v-8.5C2 4.58 4.58 2 7.75 2zm8.5 2h-8.5C5.69 4 4 5.69 4 7.75v8.5C4 18.31 5.69 20 7.75 20h8.5C18.31 20 20 18.31 20 16.25v-8.5C20 5.69 18.31 4 16.25 4zm-4.25 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.25 6.6a1.05 1.05 0 1 1-1.05 1.05 1.05 1.05 0 0 1 1.05-1.05z"/>
+      </svg>
+    </a>
+  </div>
 
   <nav>
     <a href="#" onclick="showSection('home')">Home</a>
@@ -516,7 +569,6 @@ footer{
 
 </section>
 
-
 <!-- BEDS -->
 <section class="section" id="beds">
   <h2 class="sectionTitle">Beds</h2>
@@ -734,7 +786,7 @@ footer{
   </div>
 </section>
 
-<!-- CONTACT (UPDATED) -->
+<!-- CONTACT -->
 <section class="section" id="contact">
   <h2 class="sectionTitle">Contact</h2>
 
@@ -847,10 +899,3 @@ lightbox.addEventListener("click",()=>{
 
 </body>
 </html>
-
-
-
-
-
-
-
