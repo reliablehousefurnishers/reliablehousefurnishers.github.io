@@ -118,8 +118,9 @@ header{
   width:100%;
   max-width:var(--logoMaxW);
   height:auto;
+  max-height:140px;     /* ✅ ADD THIS */
+  object-fit:contain;   /* ✅ ADD THIS */
   margin:0 auto var(--logoGap);
-  filter: none; /* keep it crisp / old-school */
 }
 
 /* Sub-lines under the logo */
@@ -981,4 +982,5 @@ lightbox.addEventListener("click",()=>{
 
 </body>
 </html>
+
 
