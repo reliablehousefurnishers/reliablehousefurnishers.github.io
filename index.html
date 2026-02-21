@@ -21,18 +21,18 @@
 <!-- ✅ SEO: Canonical -->
 <link rel="canonical" href="https://reliablehousefurnishers.ie/" />
 
-<!-- ✅ SEO: Open Graph (nice when shared on Facebook/WhatsApp) -->
+<!-- ✅ SEO: Open Graph -->
 <meta property="og:title" content="Reliable House Furnishers | Furniture Store in Portlaoise (Since 1969)" />
 <meta property="og:description" content="Family-run furniture shop in Portlaoise, Co. Laois. Beds, mattresses, sofas, carpets, rugs, flooring, blinds and home furnishings — serving the community since 1969." />
 <meta property="og:url" content="https://reliablehousefurnishers.ie/" />
 <meta property="og:type" content="website" />
 
-<!-- ✅ SEO: Twitter (optional but harmless) -->
+<!-- ✅ SEO: Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Reliable House Furnishers | Furniture Store in Portlaoise" />
 <meta name="twitter:description" content="Beds, mattresses, sofas, carpets, rugs, flooring & blinds — family-run in Portlaoise, Co. Laois since 1969." />
 
-<!-- ✅ LocalBusiness Schema (Google understands what you are + where you are) -->
+<!-- ✅ LocalBusiness Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -77,6 +77,12 @@
   --shadow:0 5px 15px rgba(0,0,0,.10);
   --radius:12px;
   --max:1100px;
+
+  /* ✅ Easy header knobs (tweak these) */
+  --headerPadTop:18px;
+  --headerPadBottom:16px;
+  --logoMaxW:760px;
+  --logoGap:10px;
 }
 
 *{box-sizing:border-box;}
@@ -92,15 +98,42 @@ body{
 header{
   background:#111;
   color:#fff;
-  padding:22px 16px 18px;
+  padding:var(--headerPadTop) 16px var(--headerPadBottom);
   text-align:center;
   position:static;
 }
 
-header h1{margin:0; font-size:2rem;}
+/* ✅ Keep the H1 for SEO but hide it visually (not display:none) */
+.sr-only{
+  position:absolute !important;
+  width:1px; height:1px;
+  padding:0; margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+/* ✅ New logo styling */
+.headerLogo{
+  display:block;
+  width:100%;
+  max-width:var(--logoMaxW);
+  height:auto;
+  margin:0 auto var(--logoGap);
+  filter: none; /* keep it crisp / old-school */
+}
+
+/* Sub-lines under the logo */
 header p{margin:8px 0 0; opacity:.95;}
 
-/* ✅ Fix ugly blue phone/email links (header + anywhere else) */
+.headerSubline{
+  margin-top:6px;
+  font-style:italic;
+  opacity:.85;
+}
+
+/* ✅ Fix ugly blue phone/email links */
 a[href^="tel"],
 a[href^="mailto"],
 .phone-link,
@@ -174,8 +207,14 @@ nav a{
 nav a:hover{background:#f0f0f0;}
 nav a:active{transform:translateY(1px);}
 
-/* ✅ Make tabs smaller + nicer on phones */
+/* ✅ Tabs nicer on phones */
 @media (max-width: 700px){
+  :root{
+    --headerPadTop:14px;
+    --headerPadBottom:12px;
+    --logoMaxW:520px;
+  }
+
   nav{
     flex-wrap:nowrap;
     overflow-x:auto;
@@ -229,7 +268,7 @@ main{
   display:block;
 }
 
-/* ✅ Videos: no cropping, centered */
+/* Videos */
 .tile video{
   width:100%;
   height:260px;
@@ -309,7 +348,7 @@ footer{
   border-top:1px solid #eee;
 }
 
-/* ✅ Clickable images + gentle hover */
+/* Clickable images */
 .tile img{
   cursor:pointer;
   transition:transform .15s ease;
@@ -318,7 +357,7 @@ footer{
   transform:scale(1.02);
 }
 
-/* ✅ Lightbox */
+/* Lightbox */
 .lightbox{
   position:fixed;
   inset:0;
@@ -337,7 +376,7 @@ footer{
   box-shadow:0 10px 40px rgba(0,0,0,.5);
 }
 
-/* ✅ Make contact links dark on white cards (Contact section) */
+/* Contact links dark on white cards */
 .sectionIntro a[href^="tel"],
 .sectionIntro a[href^="mailto"]{
   color:#111;
@@ -349,7 +388,7 @@ footer{
   text-decoration:underline;
 }
 
-/* ✅ Our Story links look tidy */
+/* Our Story links */
 .articleLinks{
   margin:10px 0 0;
   padding-left:18px;
@@ -362,7 +401,7 @@ footer{
 }
 .articleLinks a:hover{ text-decoration:underline; }
 
-/* ✅ Tiny SEO helper: visually subtle, not hidden */
+/* Subtle SEO helper */
 .seoNote{
   color:var(--muted);
   font-size:0.95rem;
@@ -373,13 +412,16 @@ footer{
 <body>
 
 <header>
-  <h1>Reliable House Furnishers</h1>
+  <!-- ✅ Keep H1 for SEO -->
+  <h1 class="sr-only">Reliable House Furnishers – Furniture Store in Portlaoise, Co. Laois (Since 1969)</h1>
 
-  <p style="margin-top:6px; font-style:italic; opacity:0.85;">
-    Serving Portlaoise since 1969
-  </p>
+  <!-- ✅ New top logo -->
+  <img class="headerLogo"
+       src="images/new-logo.png"
+       alt="Reliable House Furnishers — Station Road, Portlaoise — Est. 1969">
 
-  <!-- ✅ Added one extra keyword phrase naturally -->
+  <p class="headerSubline">Serving Portlaoise since 1969</p>
+
   <p class="seoNote" style="margin-top:10px; opacity:0.9;">
     Family-run <strong>furniture store in Portlaoise, Co. Laois</strong> — beds, mattresses, sofas, carpets, rugs, flooring &amp; blinds.
   </p>
@@ -390,7 +432,6 @@ footer{
     <a href="mailto:reliablehousefurnishers@gmail.com" class="email-link">reliablehousefurnishers@gmail.com</a>
   </p>
 
-  <!-- ✅ ICON LOGOS instead of words -->
   <div class="social" aria-label="Social links">
     <a href="https://www.facebook.com/share/17ts8RxJQ7/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -427,7 +468,8 @@ footer{
 <section class="section active" id="home">
   <div class="galleryGrid">
     <article class="tile homeCard">
-      <img src="images/billy.jpg" alt="Billy Rowan (founder) — Reliable House Furnishers furniture store in Portlaoise, established 1969"
+      <img src="images/billy.jpg"
+           alt="Billy Rowan (founder) — Reliable House Furnishers furniture store in Portlaoise, established 1969"
            style="width:75%; display:block; margin:0 auto 16px; border-radius:10px; cursor:default;">
 
       <h2>Furniture Store in Portlaoise — Serving Laois Since 1969</h2>
@@ -453,22 +495,23 @@ footer{
         Pop in, have a chat, and see why Reliable House Furnishers has been part of local homes in <strong>Portlaoise</strong> and across <strong>Co. Laois</strong> since 1969.
       </p>
 
-      <p class="tagline">Everything you need to make a house a home.</p> 
+      <p class="tagline">Everything you need to make a house a home.</p>
+
       <div class="sectionIntro" style="margin-top:18px; text-align:center;">
-  <h3 style="margin:0 0 10px;">Enjoyed your visit?</h3>
-  <p style="margin:10px 0;">
-    If you've bought furniture, beds, carpets or blinds from us, we’d really appreciate a quick Google review.
-    It helps other people in Portlaoise find our local furniture store.
-  </p>
-  <div class="btnRow" style="justify-content:center;">
-    <a class="btn btnPrimary"
-       href="https://g.page/r/CUT1eWwviC0cEBM/review"
-       target="_blank"
-       rel="noopener">
-       Leave a Google Review
-    </a>
-  </div>
-</div>
+        <h3 style="margin:0 0 10px;">Enjoyed your visit?</h3>
+        <p style="margin:10px 0;">
+          If you've bought furniture, beds, carpets or blinds from us, we’d really appreciate a quick Google review.
+          It helps other people in Portlaoise find our local furniture store.
+        </p>
+        <div class="btnRow" style="justify-content:center;">
+          <a class="btn btnPrimary"
+             href="https://g.page/r/CUT1eWwviC0cEBM/review"
+             target="_blank"
+             rel="noopener">
+             Leave a Google Review
+          </a>
+        </div>
+      </div>
 
       <p class="visit">
         Visit us on <strong>Station Road, Portlaoise (R32 DA26)</strong> — your local destination for furniture, beds, carpets, flooring and blinds.
@@ -528,7 +571,6 @@ footer{
   </div>
 
   <div class="galleryGrid">
-
     <div class="tile">
       <video controls muted loop playsinline preload="metadata" aria-label="Short history video of Reliable House Furnishers, furniture store in Portlaoise since 1969">
         <source src="images/a-short-story.mp4" type="video/mp4">
@@ -607,8 +649,10 @@ footer{
       </a>
     </div>
   </div>
-
 </section>
+
+<!-- ✅ The rest of your sections stay exactly the same -->
+<!-- NOTE: For brevity, keep your existing Beds/Sofas/etc sections unchanged below this point. -->
 
 <!-- BEDS -->
 <section class="section" id="beds">
@@ -668,18 +712,16 @@ footer{
   </div>
 </section>
 
-<!-- BEDROOM FURNITURE -->
+<!-- BEDROOM -->
 <section class="section" id="bedroom">
   <h2 class="sectionTitle">Bedroom Furniture in Portlaoise (Vanity Units &amp; Dressers)</h2>
 
   <div class="sectionIntro">
     <p><strong>Add elegance and practicality to your bedroom with our range of vanity units and dressers.</strong></p>
-
     <p>
       As a local <strong>furniture store in Portlaoise</strong>, we stock bedroom pieces that bring both function and charm to your space —
       with styles to suit classic and modern homes across Co. Laois.
     </p>
-
     <p>
       Beautifully made and built to last, our vanity units and dressers help you create a bedroom that feels calm, organised and effortlessly stylish.
     </p>
@@ -698,12 +740,10 @@ footer{
 
   <div class="sectionIntro">
     <p><strong>A well-designed wardrobe is the key to an organised and clutter-free bedroom.</strong></p>
-
     <p>
       Our range of wardrobes offers generous storage, smart shelving and stylish finishes to suit rooms of every size —
       with practical options for homes across Portlaoise and Co. Laois.
     </p>
-
     <p>
       With plenty of space for hanging, folding and storing, our wardrobes help keep everything in its place — so your bedroom stays calm and clutter-free.
     </p>
@@ -833,9 +873,7 @@ footer{
   <div class="sectionIntro" style="max-width:760px; margin:auto;">
     <p style="margin-top:0;"><strong>Reliable House Furnishers</strong></p>
 
-    <p>
-      Station Road, Portlaoise, Co. Laois, R32 DA26
-    </p>
+    <p>Station Road, Portlaoise, Co. Laois, R32 DA26</p>
 
     <p class="seoNote" style="margin-top:10px;">
       Local furniture store in Portlaoise for beds, mattresses, sofas, carpets, rugs, flooring and blinds.
@@ -869,6 +907,12 @@ footer{
          href="https://www.google.com/maps/search/?api=1&query=Reliable+House+Furnishers+Station+Road+Portlaoise+R32+DA26"
          target="_blank" rel="noopener">
         Get Directions
+      </a>
+
+      <a class="btn btnSecondary"
+         href="https://g.page/r/CUT1eWwviC0cEBM/review"
+         target="_blank" rel="noopener">
+        Leave a Google Review
       </a>
     </div>
 
@@ -939,5 +983,3 @@ lightbox.addEventListener("click",()=>{
 
 </body>
 </html>
-
-
