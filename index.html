@@ -13,7 +13,59 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Reliable House Furnishers | Portlaoise</title>
+
+<!-- ✅ SEO: Title + Description -->
+<title>Reliable House Furnishers | Furniture Store in Portlaoise, Co. Laois (Since 1969)</title>
+<meta name="description" content="Reliable House Furnishers is a family-run furniture store in Portlaoise, Co. Laois, serving the community since 1969. Beds, mattresses, sofas, carpets, rugs, flooring, blinds and home furnishings on Station Road." />
+
+<!-- ✅ SEO: Canonical -->
+<link rel="canonical" href="https://reliablehousefurnishers.ie/" />
+
+<!-- ✅ SEO: Open Graph (nice when shared on Facebook/WhatsApp) -->
+<meta property="og:title" content="Reliable House Furnishers | Furniture Store in Portlaoise (Since 1969)" />
+<meta property="og:description" content="Family-run furniture shop in Portlaoise, Co. Laois. Beds, mattresses, sofas, carpets, rugs, flooring, blinds and home furnishings — serving the community since 1969." />
+<meta property="og:url" content="https://reliablehousefurnishers.ie/" />
+<meta property="og:type" content="website" />
+
+<!-- ✅ SEO: Twitter (optional but harmless) -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Reliable House Furnishers | Furniture Store in Portlaoise" />
+<meta name="twitter:description" content="Beds, mattresses, sofas, carpets, rugs, flooring & blinds — family-run in Portlaoise, Co. Laois since 1969." />
+
+<!-- ✅ LocalBusiness Schema (Google understands what you are + where you are) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  "name": "Reliable House Furnishers",
+  "url": "https://reliablehousefurnishers.ie/",
+  "image": "https://reliablehousefurnishers.ie/images/55-years.jpeg",
+  "description": "Reliable House Furnishers is a family-run furniture store in Portlaoise, Co. Laois, serving the community since 1969. Beds, mattresses, sofas, carpets, rugs, flooring, blinds and home furnishings.",
+  "telephone": "+353578621706",
+  "email": "reliablehousefurnishers@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Station Road",
+    "addressLocality": "Portlaoise",
+    "addressRegion": "Co. Laois",
+    "postalCode": "R32 DA26",
+    "addressCountry": "IE"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Portlaoise" },
+    { "@type": "AdministrativeArea", "name": "Co. Laois" }
+  ],
+  "foundingDate": "1969",
+  "sameAs": [
+    "https://www.facebook.com/share/17ts8RxJQ7/?mibextid=wwXIfr",
+    "https://www.instagram.com/reliable_house_furnishers1969"
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:30", "closes": "16:00" }
+  ]
+}
+</script>
 
 <style>
 :root{
@@ -125,8 +177,8 @@ nav a:active{transform:translateY(1px);}
 /* ✅ Make tabs smaller + nicer on phones */
 @media (max-width: 700px){
   nav{
-    flex-wrap:nowrap;               /* stop chunky wrapping */
-    overflow-x:auto;                /* allow swipe */
+    flex-wrap:nowrap;
+    overflow-x:auto;
     -webkit-overflow-scrolling:touch;
     justify-content:flex-start;
     gap:8px;
@@ -135,9 +187,9 @@ nav a:active{transform:translateY(1px);}
   }
   nav::-webkit-scrollbar{height:6px;}
   nav a{
-    padding:8px 12px;               /* slimmer */
+    padding:8px 12px;
     border-radius:9px;
-    font-size:14px;                 /* smaller text */
+    font-size:14px;
   }
 }
 
@@ -247,9 +299,7 @@ main{
   line-height:1.75;
 }
 
-.sectionIntro p{
-  margin:10px 0;
-}
+.sectionIntro p{ margin:10px 0; }
 
 footer{
   text-align:center;
@@ -304,16 +354,18 @@ footer{
   margin:10px 0 0;
   padding-left:18px;
 }
-.articleLinks li{
-  margin:8px 0;
-}
+.articleLinks li{ margin:8px 0; }
 .articleLinks a{
   color:#111;
   font-weight:900;
   text-decoration:none;
 }
-.articleLinks a:hover{
-  text-decoration:underline;
+.articleLinks a:hover{ text-decoration:underline; }
+
+/* ✅ Tiny SEO helper: visually subtle, not hidden */
+.seoNote{
+  color:var(--muted);
+  font-size:0.95rem;
 }
 </style>
 </head>
@@ -327,6 +379,11 @@ footer{
     Serving Portlaoise since 1969
   </p>
 
+  <!-- ✅ Added one extra keyword phrase naturally -->
+  <p class="seoNote" style="margin-top:10px; opacity:0.9;">
+    Family-run <strong>furniture store in Portlaoise, Co. Laois</strong> — beds, mattresses, sofas, carpets, rugs, flooring &amp; blinds.
+  </p>
+
   <p style="margin-top:14px;">
     Station Road, Portlaoise |
     <a href="tel:+353578621706" class="phone-link">057 86 21706</a> |
@@ -336,14 +393,12 @@ footer{
   <!-- ✅ ICON LOGOS instead of words -->
   <div class="social" aria-label="Social links">
     <a href="https://www.facebook.com/share/17ts8RxJQ7/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
-      <!-- Facebook SVG -->
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.23 10.44 22v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.62.77-1.62 1.56v1.88h2.76l-.44 2.91h-2.32V22C18.34 21.23 22 17.08 22 12.06z"/>
       </svg>
     </a>
 
     <a href="https://www.instagram.com/reliable_house_furnishers1969" target="_blank" rel="noopener" aria-label="Instagram">
-      <!-- Instagram SVG -->
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M7.75 2h8.5C19.42 2 22 4.58 22 7.75v8.5C22 19.42 19.42 22 16.25 22h-8.5C4.58 22 2 19.42 2 16.25v-8.5C2 4.58 4.58 2 7.75 2zm8.5 2h-8.5C5.69 4 4 5.69 4 7.75v8.5C4 18.31 5.69 20 7.75 20h8.5C18.31 20 20 18.31 20 16.25v-8.5C20 5.69 18.31 4 16.25 4zm-4.25 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.25 6.6a1.05 1.05 0 1 1-1.05 1.05 1.05 1.05 0 0 1 1.05-1.05z"/>
       </svg>
@@ -372,58 +427,49 @@ footer{
 <section class="section active" id="home">
   <div class="galleryGrid">
     <article class="tile homeCard">
-      <img src="images/billy.jpg" alt="Billy Rowan, founder of Reliable House Furnishers"
+      <img src="images/billy.jpg" alt="Billy Rowan (founder) — Reliable House Furnishers furniture store in Portlaoise, established 1969"
            style="width:75%; display:block; margin:0 auto 16px; border-radius:10px; cursor:default;">
 
-      <h2>Welcome to Reliable House Furnishers</h2>
+      <h2>Furniture Store in Portlaoise — Serving Laois Since 1969</h2>
 
       <p>
-        Founded by Billy Rowan in 1969, Reliable House Furnishers has been at the heart of homes in Portlaoise and beyond for over five decades.
-        What began as a small family business on Station Road grew into a trusted name for quality furniture, flooring, beds, carpets, blinds,
-        and home essentials — all under one roof.
+        Welcome to <strong>Reliable House Furnishers</strong>, a <strong>family-run furniture store in Portlaoise, Co. Laois</strong>.
+        Founded by Billy Rowan in 1969, we’ve been helping local families furnish their homes for over five decades with honest advice,
+        fair prices, and customer service you can trust.
       </p>
 
       <p>
-        Billy built the business on simple values: honest advice, fair prices, and looking after every customer who walked through the door.
-        Those values still guide everything we do today.
+        We stock a wide range of <strong>beds and mattresses in Portlaoise</strong>, plus <strong>sofas and seating</strong>, bedroom furniture and wardrobes.
+        You’ll also find <strong>carpets in Portlaoise</strong>, stylish rugs, quality flooring (including wooden floors and vinyl),
+        and practical <strong>blinds</strong> — all under one roof on Station Road.
       </p>
 
       <p>
-        We believe your home should feel warm, comfortable, and uniquely yours. That’s why we stock an extensive range of carefully chosen pieces
-        to suit every style and every budget, from timeless classics to modern must-haves.
+        Whether you’re furnishing a new house, refreshing a room, choosing the perfect bed for a better night’s sleep, or finding the right carpet,
+        rug, flooring or blind to finish a space — our experienced team is here to help you make the right choice.
       </p>
 
       <p>
-        As a family-run business, customer care has always been at the centre of what we do. Many of our customers have been shopping with us for generations,
-        and we pride ourselves on offering the kind of personal service you simply won’t find in larger chain stores.
-      </p>
-
-      <p>
-        Whether you’re furnishing a new house, refreshing a room, choosing the perfect bed for a better night’s sleep, or finding the right carpet, rug,
-        or blind to complete a space — our experienced team is here to help you make the right choice.
-      </p>
-
-      <p>
-        Pop in, have a chat, and see why Reliable House Furnishers has been a part of local homes since 1969.
+        Pop in, have a chat, and see why Reliable House Furnishers has been part of local homes in <strong>Portlaoise</strong> and across <strong>Co. Laois</strong> since 1969.
       </p>
 
       <p class="tagline">Everything you need to make a house a home.</p>
 
       <p class="visit">
-        Visit us on Station Road, Portlaoise — where quality, value, and service never go out of style.
+        Visit us on <strong>Station Road, Portlaoise (R32 DA26)</strong> — your local destination for furniture, beds, carpets, flooring and blinds.
       </p>
 
       <div class="btnRow">
         <a class="btn btnPrimary" href="#" onclick="showSection('ourstory')">Our Story</a>
-        <a class="btn btnSecondary" href="#" onclick="showSection('beds')">Browse Beds</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('beds')">Beds &amp; Mattresses</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('sofas')">Sofas &amp; Seating</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('bedroom')">Bedroom Furniture</a>
         <a class="btn btnSecondary" href="#" onclick="showSection('wardrobes')">Wardrobes</a>
-        <a class="btn btnSecondary" href="#" onclick="showSection('carpets')">Browse Carpets</a>
-        <a class="btn btnSecondary" href="#" onclick="showSection('rugs')">Browse Rugs</a>
-        <a class="btn btnSecondary" href="#" onclick="showSection('flooring')">Browse Flooring</a>
-        <a class="btn btnSecondary" href="#" onclick="showSection('blinds')">Browse Blinds</a>
-        <a class="btn btnSecondary" href="#" onclick="showSection('gas')">Browse Gas</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('carpets')">Carpets</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('rugs')">Rugs</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('flooring')">Flooring</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('blinds')">Blinds</a>
+        <a class="btn btnSecondary" href="#" onclick="showSection('gas')">Gas Cylinders</a>
       </div>
     </article>
   </div>
@@ -431,87 +477,70 @@ footer{
 
 <!-- OUR STORY -->
 <section class="section" id="ourstory">
-  <h2 class="sectionTitle">Our Story</h2>
+  <h2 class="sectionTitle">Our Story — A Portlaoise Furniture Shop Since 1969</h2>
 
-<div class="sectionIntro">
+  <div class="sectionIntro">
+    <p><strong>Reliable House Furnishers has been part of the heart and fabric of Portlaoise since 1969.</strong></p>
 
-  <p><strong>Reliable House Furnishers has been part of the heart and fabric of Portlaoise since 1969.</strong></p>
-
-  <p>
-    Founded by Billy Rowan, what began as a small, ambitious local business on Station Road has grown into one of Laois’s longest-standing family furniture stores.
-  </p>
-
-  <p>
-    Interestingly, the shop didn’t start out selling sofas or beds. In its earliest days, it stocked bicycles and wireless radios.
-    But as the years passed and the needs of local families changed, the business naturally evolved.
-    Furniture and home furnishings became the focus — and that’s where Reliable House Furnishers truly found its identity.
-  </p>
-
-  <p>
-    From the beginning, it was a family affair. Billy worked alongside his brothers Harry and Douglas, building a reputation not just for quality products,
-    but for honest advice and genuine customer care. Later, brother Ken also became involved.
-    Over time, the next generation stepped in, continuing the tradition and keeping the business rooted in family values.
-  </p>
-
-  <p>
-    Through economic highs and lows, changing trends, and the rise of big retail chains,
-    Reliable House Furnishers stayed true to what made it successful: fair prices, dependable service,
-    and looking after every customer who walked through the door.
-  </p>
-
-  <p>
-    What started with second-hand pieces decades ago grew into a trusted destination for beds, sofas, carpets,
-    flooring, blinds, and home essentials — all under one roof.
-    Many customers have furnished entire homes there, returning again and again, sometimes across generations.
-  </p>
-
-  <p>
-    In 2024, the business proudly marked 55 years in operation — a milestone that reflects not just longevity,
-    but loyalty from the community it has served for more than five decades.
-  </p>
-
-  <p>
-    <strong>Reliable House Furnishers isn’t just a shop.
-    It’s a story of hard work, resilience, and family — woven into homes across Portlaoise and beyond.</strong>
-  </p>
-
-        Here’s a little look back at our story, and a few articles that celebrated our 55 years in business in 2024.
+    <p>
+      Founded by Billy Rowan, what began as a small local business on Station Road has grown into one of Co. Laois’s longest-standing
+      <strong>family furniture stores</strong> — trusted for beds, sofas, carpets, flooring and blinds.
     </p>
-</div>
+
+    <p>
+      Interestingly, the shop didn’t start out selling sofas or beds. In its earliest days, it stocked bicycles and wireless radios.
+      As the needs of local families changed, the business evolved into the <strong>furniture and home furnishings</strong> store it is today.
+    </p>
+
+    <p>
+      From the beginning, it was a family affair. Billy worked alongside his brothers Harry and Douglas, building a reputation not just for quality products,
+      but for honest advice and genuine customer care. Later, brother Ken also became involved.
+    </p>
+
+    <p>
+      Through changing trends and the rise of big retail chains, Reliable House Furnishers stayed true to what made it successful:
+      fair prices, dependable service, and looking after every customer who walked through the door.
+    </p>
+
+    <p>
+      Many customers have furnished entire homes with us, returning again and again — sometimes across generations.
+      We’re proud to be a local <strong>furniture store in Portlaoise</strong> that still believes in doing things properly.
+    </p>
+
+    <p>
+      Here’s a little look back at our story, and a few articles that celebrated our 55 years in business in 2024.
+    </p>
+  </div>
 
   <div class="galleryGrid">
 
-    <!-- Videos -->
     <div class="tile">
-      <video controls muted loop playsinline preload="metadata">
+      <video controls muted loop playsinline preload="metadata" aria-label="Short history video of Reliable House Furnishers, furniture store in Portlaoise since 1969">
         <source src="images/a-short-story.mp4" type="video/mp4">
       </video>
     </div>
 
     <div class="tile">
-      <video controls muted loop playsinline preload="metadata">
+      <video controls muted loop playsinline preload="metadata" aria-label="Reliable House Furnishers advert — Portlaoise furniture shop">
         <source src="images/rhf-ad.mp4" type="video/mp4">
       </video>
     </div>
 
-    <!-- NEW 2FM VIDEO -->
     <div class="tile">
-      <video controls muted loop playsinline preload="metadata">
+      <video controls muted loop playsinline preload="metadata" aria-label="2FM advert featuring Reliable House Furnishers in Portlaoise">
         <source src="images/2fm-ad.mp4" type="video/mp4">
       </video>
     </div>
 
-    <!-- 55 Years Image -->
     <div class="tile">
-      <img src="images/55-years.jpeg" alt="Reliable House Furnishers - 55 Years">
+      <img src="images/55-years.jpeg" alt="Reliable House Furnishers — Portlaoise furniture store celebrating 55 years, established 1969">
     </div>
 
-    <!-- Articles -->
     <article class="tile homeCard" style="max-width:860px;">
       <h3 style="margin:6px 0 8px;">55 Years in the News</h3>
 
       <p style="margin:10px 0;">
-        We were honoured to have our 55th anniversary featured locally. Have a read here:
+        We were honoured to have our anniversary featured locally — a proud moment for a family-run furniture shop in Portlaoise.
       </p>
 
       <ul class="articleLinks">
@@ -546,12 +575,10 @@ footer{
     </article>
   </div>
 
-  <!-- Sponsorship (Subtle) -->
   <div style="max-width:860px; margin:28px auto 0; padding-top:16px; border-top:1px solid var(--border); text-align:center;">
-
     <div style="max-width:110px; margin:0 auto 12px;">
       <img src="images/how-is-he.png"
-           alt="How Is He Podcast logo"
+           alt="How Is He Podcast logo — sponsored by Reliable House Furnishers, Portlaoise"
            style="width:100%; height:auto; display:block;">
     </div>
 
@@ -564,79 +591,78 @@ footer{
         How Is He Podcast
       </a>
     </div>
-
   </div>
 
 </section>
 
 <!-- BEDS -->
 <section class="section" id="beds">
-  <h2 class="sectionTitle">Beds</h2>
+  <h2 class="sectionTitle">Beds &amp; Mattresses in Portlaoise</h2>
 
   <div class="sectionIntro">
     <p><strong>A great day starts with a great night’s sleep — and the right bed makes all the difference.</strong></p>
     <p>
-      At Reliable House Furnishers, we stock a wide range of quality beds to suit every home, style and budget. Whether you’re looking for a supportive
-      mattress, a stylish bed frame, clever storage solutions or a full bedroom set-up, you’ll find comfort, durability and value in every option.
+      Looking for <strong>beds in Portlaoise</strong> or a supportive <strong>mattress in Co. Laois</strong>?
+      At Reliable House Furnishers, we stock a wide range of quality beds and mattresses to suit every home, style and budget.
     </p>
     <p>
-      From cosy single beds to luxurious king sizes, our collection combines trusted brands with designs that bring both comfort and character to your bedroom.
-      Our team is always on hand to help you choose the perfect fit, so you can rest easy knowing you’ve made the right choice.
+      Whether you’re choosing a bed frame, clever storage solutions or a full bedroom set-up, you’ll find comfort, durability and value —
+      with friendly, local advice from our team on Station Road.
     </p>
     <p><strong>Because when you sleep better, you live better.</strong></p>
   </div>
 
   <div class="galleryGrid">
     <div class="tile">
-      <video controls muted loop playsinline preload="metadata">
+      <video controls muted loop playsinline preload="metadata" aria-label="Beds and mattresses on display at Reliable House Furnishers, Portlaoise">
         <source src="images/bed2.mp4" type="video/mp4">
       </video>
     </div>
     <div class="tile">
-      <img src="images/beds2.jpg" alt="Beds on display in store">
+      <img src="images/beds2.jpg" alt="Beds and mattresses on display in our Portlaoise furniture store">
     </div>
   </div>
 </section>
 
 <!-- SOFAS & SEATING -->
 <section class="section" id="sofas">
-  <h2 class="sectionTitle">Sofas &amp; Seating</h2>
+  <h2 class="sectionTitle">Sofas &amp; Seating in Portlaoise</h2>
 
   <div class="sectionIntro">
     <p><strong>Your living room should be the most comfortable space in your home — a place to unwind, entertain and truly relax.</strong></p>
 
     <p>
-      Our range of sofas and seating combines comfort, style and durability to suit every home and every budget.
-      From spacious three-piece suites to cosy armchairs, recliners and practical footstools, you’ll find pieces designed for everyday living.
+      Our range of <strong>sofas in Portlaoise</strong> includes three-piece suites, armchairs, recliners and footstools —
+      combining comfort, style and durability to suit every home and budget across Portlaoise and Co. Laois.
     </p>
 
     <p>
-      Whether you prefer classic elegance or modern comfort, our collection is carefully chosen to offer quality you can rely on and comfort you’ll enjoy for years to come.
+      Whether you prefer classic elegance or modern comfort, our collection is chosen for everyday living — and service you won’t find in big chains.
     </p>
 
     <p><strong>Because the best moments at home start with a comfortable seat.</strong></p>
   </div>
 
   <div class="galleryGrid">
-    <div class="tile"><img src="images/sofa1.jpeg" alt="Sofas and seating in store - 1"></div>
-    <div class="tile"><img src="images/sofa2.jpeg" alt="Sofas and seating in store - 2"></div>
-    <div class="tile"><img src="images/sofa3.jpeg" alt="Sofas and seating in store - 3"></div>
-    <div class="tile"><img src="images/sofa4.jpeg" alt="Sofas and seating in store - 4"></div>
-    <div class="tile"><img src="images/sofa5.jpeg" alt="Sofas and seating in store - 5"></div>
-    <div class="tile"><img src="images/sofa6.jpeg" alt="Sofas and seating in store - 6"></div>
+    <div class="tile"><img src="images/sofa1.jpeg" alt="Sofas and seating in our Portlaoise furniture shop - 1"></div>
+    <div class="tile"><img src="images/sofa2.jpeg" alt="Sofas and seating in our Portlaoise furniture shop - 2"></div>
+    <div class="tile"><img src="images/sofa3.jpeg" alt="Sofas and seating in our Portlaoise furniture shop - 3"></div>
+    <div class="tile"><img src="images/sofa4.jpeg" alt="Sofas and seating in our Portlaoise furniture shop - 4"></div>
+    <div class="tile"><img src="images/sofa5.jpeg" alt="Sofas and seating in our Portlaoise furniture shop - 5"></div>
+    <div class="tile"><img src="images/sofa6.jpeg" alt="Sofas and seating in our Portlaoise furniture shop - 6"></div>
   </div>
 </section>
 
 <!-- BEDROOM FURNITURE -->
 <section class="section" id="bedroom">
-  <h2 class="sectionTitle">Bedroom Furniture (Vanity Units &amp; Dressers)</h2>
+  <h2 class="sectionTitle">Bedroom Furniture in Portlaoise (Vanity Units &amp; Dressers)</h2>
 
   <div class="sectionIntro">
     <p><strong>Add elegance and practicality to your bedroom with our range of vanity units and dressers.</strong></p>
 
     <p>
-      Perfect for keeping your everyday essentials organised while creating a stylish focal point, these pieces bring both function and charm to your space.
-      Whether you prefer a classic look or a modern finish, our collection offers designs to suit every taste.
+      As a local <strong>furniture store in Portlaoise</strong>, we stock bedroom pieces that bring both function and charm to your space —
+      with styles to suit classic and modern homes across Co. Laois.
     </p>
 
     <p>
@@ -645,33 +671,33 @@ footer{
   </div>
 
   <div class="galleryGrid">
-    <div class="tile"><img src="images/bedroom1.jpg" alt="Bedroom furniture: vanity units and dressers"></div>
-    <div class="tile"><img src="images/bedroom2.jpg" alt="Bedroom furniture display"></div>
-    <div class="tile"><img src="images/bedroom3.jpg" alt="Dressers and vanity units in store"></div>
+    <div class="tile"><img src="images/bedroom1.jpg" alt="Bedroom furniture in Portlaoise: vanity units and dressers"></div>
+    <div class="tile"><img src="images/bedroom2.jpg" alt="Bedroom furniture display in our Portlaoise furniture store"></div>
+    <div class="tile"><img src="images/bedroom3.jpg" alt="Dressers and vanity units in our Portlaoise furniture store"></div>
   </div>
 </section>
 
 <!-- WARDROBES -->
 <section class="section" id="wardrobes">
-  <h2 class="sectionTitle">Wardrobes</h2>
+  <h2 class="sectionTitle">Wardrobes in Portlaoise</h2>
 
   <div class="sectionIntro">
     <p><strong>A well-designed wardrobe is the key to an organised and clutter-free bedroom.</strong></p>
 
     <p>
-      Our range of wardrobes offers generous storage, smart shelving and stylish finishes to suit rooms of every size.
-      From sleek modern designs to timeless classics, you’ll find options that combine practicality with great design.
+      Our range of wardrobes offers generous storage, smart shelving and stylish finishes to suit rooms of every size —
+      with practical options for homes across Portlaoise and Co. Laois.
     </p>
 
     <p>
-      With plenty of space for hanging, folding and storing, our wardrobes help keep everything in its place — so your bedroom can remain a place of rest and relaxation.
+      With plenty of space for hanging, folding and storing, our wardrobes help keep everything in its place — so your bedroom stays calm and clutter-free.
     </p>
   </div>
 
   <div class="galleryGrid">
-    <div class="tile"><img src="images/wardrobes.jpg" alt="Wardrobes available in store"></div>
+    <div class="tile"><img src="images/wardrobes.jpg" alt="Wardrobes available in our Portlaoise furniture store"></div>
     <div class="tile">
-      <video controls muted loop playsinline preload="metadata">
+      <video controls muted loop playsinline preload="metadata" aria-label="Wardrobes on display at Reliable House Furnishers, Portlaoise">
         <source src="images/wardrobes2.mp4" type="video/mp4">
       </video>
     </div>
@@ -680,14 +706,13 @@ footer{
 
 <!-- CARPETS -->
 <section class="section" id="carpets">
-  <h2 class="sectionTitle">Carpets</h2>
+  <h2 class="sectionTitle">Carpets in Portlaoise</h2>
 
   <div class="sectionIntro">
     <p><strong>Nothing transforms a room quite like a beautiful carpet underfoot.</strong></p>
     <p>
-      At Reliable House Furnishers, we stock a wide selection of carpets in a variety of colours, textures and finishes to suit every home and every style.
-      Whether you’re looking for something soft and cosy for a bedroom, durable and practical for a hallway, or elegant and warm for a living space,
-      you’ll find the perfect fit here.
+      Looking for <strong>carpets in Portlaoise</strong> or across <strong>Co. Laois</strong>?
+      We stock a wide selection of carpets in a variety of colours, textures and finishes — from cosy bedroom carpets to durable hallway options.
     </p>
     <p>
       Our carpets are chosen for comfort, quality and long-lasting wear, helping to create rooms that feel warmer, quieter and more inviting.
@@ -696,20 +721,20 @@ footer{
   </div>
 
   <div class="galleryGrid">
-    <div class="tile"><img src="images/carpets.jpg" alt="Carpet range in store"></div>
-    <div class="tile"><img src="images/carpets2.jpg" alt="Carpet styles and colours"></div>
+    <div class="tile"><img src="images/carpets.jpg" alt="Carpet range in our Portlaoise shop"></div>
+    <div class="tile"><img src="images/carpets2.jpg" alt="Carpet styles and colours available in Portlaoise"></div>
   </div>
 </section>
 
 <!-- RUGS -->
 <section class="section" id="rugs">
-  <h2 class="sectionTitle">Rugs</h2>
+  <h2 class="sectionTitle">Rugs in Portlaoise</h2>
 
   <div class="sectionIntro">
     <p><strong>A rug is the perfect way to add warmth, colour and personality to any room.</strong></p>
     <p>
-      Whether you want to define a space, soften wooden floors or add a stylish feature, our range of rugs offers something for every taste and budget.
-      From bold statement pieces to subtle, cosy textures, a rug can instantly transform the look and feel of your home.
+      Our range of rugs is ideal for defining spaces, softening wooden floors, and adding an instant lift to living rooms and bedrooms.
+      If you’re shopping for <strong>rugs in Portlaoise</strong>, pop in and see what we have in store.
     </p>
     <p>
       Practical, decorative and effortlessly stylish — sometimes it’s the small touch that makes the biggest difference.
@@ -717,9 +742,9 @@ footer{
   </div>
 
   <div class="galleryGrid">
-    <div class="tile"><img src="images/rugs.jpg" alt="Rugs selection"></div>
+    <div class="tile"><img src="images/rugs.jpg" alt="Rugs selection available in our Portlaoise furniture store"></div>
     <div class="tile">
-      <video controls muted loop playsinline preload="metadata" id="rugsVideo">
+      <video controls muted loop playsinline preload="metadata" id="rugsVideo" aria-label="Video showing rugs in our Portlaoise shop">
         <source src="images/video-rugs.mp4" type="video/mp4">
       </video>
     </div>
@@ -728,13 +753,13 @@ footer{
 
 <!-- FLOORING -->
 <section class="section" id="flooring">
-  <h2 class="sectionTitle">Flooring</h2>
+  <h2 class="sectionTitle">Flooring in Portlaoise</h2>
 
   <div class="sectionIntro">
     <p><strong>The right flooring sets the foundation for your entire home.</strong></p>
     <p>
-      We stock a quality range of wooden floors and vinyl options that combine durability with style. Designed to withstand busy households while still
-      looking beautiful, our flooring solutions are easy to maintain and built to last.
+      We stock a quality range of <strong>wooden flooring</strong> and <strong>vinyl flooring</strong> options for homes across Portlaoise and Co. Laois —
+      durable, stylish, and designed for everyday living.
     </p>
     <p>
       Whether you prefer the timeless look of wood or the practicality of modern vinyl, you’ll find flooring that suits your space perfectly.
@@ -743,19 +768,19 @@ footer{
   </div>
 
   <div class="galleryGrid">
-    <div class="tile"><img src="images/flooring2.jpg" alt="Flooring options"></div>
+    <div class="tile"><img src="images/flooring2.jpg" alt="Flooring options in our Portlaoise furniture store"></div>
   </div>
 </section>
 
 <!-- BLINDS -->
 <section class="section" id="blinds">
-  <h2 class="sectionTitle">Blinds</h2>
+  <h2 class="sectionTitle">Blinds in Portlaoise</h2>
 
   <div class="sectionIntro">
     <p><strong>Blinds are where style meets practicality in any room.</strong></p>
     <p>
-      Our selection of blinds offers privacy, light control and a clean, modern finish to your windows. Available in a variety of styles and colours,
-      they are designed to complement any décor while adding a polished look to your home.
+      Shopping for <strong>blinds in Portlaoise</strong>? Our selection offers privacy, light control and a clean finish — with styles and colours
+      to complement any décor across Co. Laois.
     </p>
     <p>
       Simple to use and easy to maintain, blinds are a smart and stylish choice for every room.
@@ -763,38 +788,42 @@ footer{
   </div>
 
   <div class="galleryGrid">
-    <div class="tile"><img src="images/blinds.jpg" alt="Blinds selection"></div>
+    <div class="tile"><img src="images/blinds.jpg" alt="Blinds selection available in our Portlaoise shop"></div>
   </div>
 </section>
 
 <!-- GAS -->
 <section class="section" id="gas">
-  <h2 class="sectionTitle">Gas</h2>
+  <h2 class="sectionTitle">Gas Cylinders (Ergas &amp; Flogas) in Portlaoise</h2>
 
   <div class="sectionIntro">
     <p><strong>We stock both large and small gas cylinders for your home and outdoor needs.</strong></p>
     <p>
-      Whether it’s for heating, cooking or barbecues, we supply reliable Ergas and Flogas cylinders at competitive prices.
-      Convenient, dependable and always in stock, we make it easy to keep your home running smoothly.
+      Convenient for heating, cooking and barbecues, we supply reliable <strong>Ergas</strong> and <strong>Flogas</strong> cylinders at competitive prices in Portlaoise.
+      Pop in to Station Road for a quick pick-up.
     </p>
     <p><strong>Practical essentials, ready when you need them.</strong></p>
   </div>
 
   <div class="galleryGrid">
-    <div class="tile"><img src="images/gas.jpg" alt="Gas cylinders available"></div>
-    <div class="tile"><img src="images/gas2.jpg" alt="Gas options in store"></div>
+    <div class="tile"><img src="images/gas.jpg" alt="Gas cylinders in Portlaoise: Ergas and Flogas available in store"></div>
+    <div class="tile"><img src="images/gas2.jpg" alt="Gas cylinder options available at Reliable House Furnishers, Station Road Portlaoise"></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="section" id="contact">
-  <h2 class="sectionTitle">Contact</h2>
+  <h2 class="sectionTitle">Contact — Reliable House Furnishers (Portlaoise, Co. Laois)</h2>
 
   <div class="sectionIntro" style="max-width:760px; margin:auto;">
     <p style="margin-top:0;"><strong>Reliable House Furnishers</strong></p>
 
     <p>
-      Station Road, Portlaoise, Laois, R32 DA26
+      Station Road, Portlaoise, Co. Laois, R32 DA26
+    </p>
+
+    <p class="seoNote" style="margin-top:10px;">
+      Local furniture store in Portlaoise for beds, mattresses, sofas, carpets, rugs, flooring and blinds.
     </p>
 
     <p>
@@ -815,7 +844,7 @@ footer{
     </p>
 
     <p style="margin-top:18px;">
-      Click below to email us, or get directions straight to the shop.
+      Click below to email us, or get directions straight to the shop on Station Road, Portlaoise.
     </p>
 
     <div class="btnRow">
@@ -830,7 +859,7 @@ footer{
 
     <div style="margin-top:18px; border-radius:12px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--border);">
       <iframe
-        title="Reliable House Furnishers Map"
+        title="Reliable House Furnishers Map - Station Road, Portlaoise"
         src="https://www.google.com/maps?q=Reliable+House+Furnishers+Station+Road+Portlaoise+R32+DA26&output=embed"
         width="100%"
         height="320"
@@ -845,10 +874,9 @@ footer{
 </main>
 
 <footer>
-  Reliable House Furnishers • Station Road, Portlaoise • Since 1969
+  Reliable House Furnishers • Furniture Store in Portlaoise, Co. Laois • Station Road • Since 1969
 </footer>
 
-<!-- ✅ Lightbox overlay -->
 <div class="lightbox" id="lightbox">
   <img id="lightboxImg" src="" alt="Enlarged image">
 </div>
@@ -868,19 +896,16 @@ function showSection(id){
   const el = document.getElementById(id);
   if(el) el.classList.add('active');
 
-  // Rebind lightbox images when switching tabs (in case content loads later)
   bindLightbox();
-
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
-/* ✅ LIGHTBOX (click any image to enlarge) */
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightboxImg");
 
 function bindLightbox(){
   document.querySelectorAll(".tile img").forEach(img=>{
-    if(img.dataset.lbBound) return;   // prevent double-binding
+    if(img.dataset.lbBound) return;
     img.dataset.lbBound = "1";
     img.addEventListener("click",()=>{
       lightbox.style.display="flex";
