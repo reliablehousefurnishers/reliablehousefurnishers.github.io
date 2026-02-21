@@ -115,11 +115,11 @@ header{
 /* ✅ New logo styling */
 .headerLogo{
   display:block;
-  width:auto;
-  max-width:420px;
-  max-height:120px;
+  width:100%;
+  max-width: min(100%, var(--logoMaxW)); /* ✅ never wider than screen */
   height:auto;
-  margin:0 auto 6px;
+  object-fit:contain;
+  margin:0 auto var(--logoGap);
 }
 
 /* Sub-lines under the logo */
@@ -210,7 +210,7 @@ nav a:active{transform:translateY(1px);}
   :root{
     --headerPadTop:14px;
     --headerPadBottom:12px;
-    --logoMaxW:520px;
+    --logoMaxW:360px;
   }
 
   nav{
@@ -981,6 +981,7 @@ lightbox.addEventListener("click",()=>{
 
 </body>
 </html>
+
 
 
 
