@@ -255,44 +255,83 @@
 
   .homeCard{
     grid-column:1/-1;
-    max-width:860px;
+    max-width:900px;
     margin:auto;
-    line-height:1.75;
+    line-height:1.8;
+    padding:22px;
   }
 
-  .homeCard h2{margin:0 0 10px;}
-  .homeCard p{margin:12px 0;}
+  .homeCard h2{
+    margin:0 0 14px;
+    font-size:2rem;
+    line-height:1.2;
+    text-align:center;
+  }
+
+  .homeCard p{
+    margin:14px 0;
+    font-size:1.03rem;
+  }
 
   .homeCard .tagline{
     font-weight:900;
-    margin-top:18px;
-    font-size:1.15rem;
+    margin-top:22px;
+    font-size:1.2rem;
+    text-align:center;
   }
 
   .homeCard .visit{
-    margin-top:16px;
-    padding-top:12px;
+    margin-top:20px;
+    padding-top:16px;
     border-top:1px solid var(--border);
+    text-align:center;
+  }
+
+  .homeHeroImg{
+    width:75%;
+    display:block;
+    margin:0 auto 20px;
+    border-radius:14px;
+    cursor:default !important;
+    box-shadow:0 10px 24px rgba(0,0,0,.10);
   }
 
   .btnRow{
-    margin-top:15px;
+    margin-top:18px;
     display:flex;
     gap:10px;
     flex-wrap:wrap;
   }
 
   .btn{
-    padding:10px 14px;
-    border-radius:10px;
-    font-weight:900;
+    padding:11px 16px;
+    border-radius:999px;
+    font-weight:800;
     text-decoration:none;
     border:1px solid transparent;
     display:inline-block;
+    transition:all .15s ease;
   }
 
-  .btnPrimary{background:#111;color:#fff;}
-  .btnSecondary{background:#fff;color:#111;border:1px solid #ddd;}
+  .btn:hover{
+    transform:translateY(-1px);
+  }
+
+  .btnPrimary{
+    background:#111;
+    color:#fff;
+    box-shadow:0 6px 16px rgba(0,0,0,.12);
+  }
+
+  .btnSecondary{
+    background:#fff;
+    color:#111;
+    border:1px solid #d9d9d9;
+  }
+
+  .btnSecondary:hover{
+    background:#f7f7f7;
+  }
 
   .sectionTitle{
     margin:0 0 10px;
@@ -413,71 +452,66 @@
     <div class="galleryGrid">
       <article class="tile homeCard">
 
-<img src="images/billy.jpg"
-alt="Billy Rowan (founder) — Reliable House Furnishers furniture store in Portlaoise, established 1969"
-style="width:75%; display:block; margin:0 auto 16px; border-radius:10px; cursor:default;">
+        <img src="images/billy.jpg"
+        alt="Billy Rowan (founder) — Reliable House Furnishers furniture store in Portlaoise, established 1969"
+        class="homeHeroImg">
 
-<h2>Furniture Store in Portlaoise — Serving Laois Since 1969</h2>
+        <h2>Furniture Store in Portlaoise — Serving Laois Since 1969</h2>
 
-<p>
-Welcome to <strong>Reliable House Furnishers</strong>, a <strong>family-run furniture store in Portlaoise, Co. Laois</strong>. Founded by Billy Rowan in 1969, we’ve been helping local families furnish their homes for over five decades with honest advice, fair prices, and customer service you can trust.
-</p>
+        <p>
+          Welcome to <strong>Reliable House Furnishers</strong>, a <strong>family-run furniture store in Portlaoise, Co. Laois</strong>. Founded by Billy Rowan in 1969, we have been helping local families furnish their homes for over five decades with honest advice, fair prices and customer service you can trust.
+        </p>
 
-<p>
-We stock a wide range of <strong>beds and mattresses in Portlaoise</strong>, plus comfortable <strong>sofas and seating</strong>, stylish <strong>wardrobes and bedroom furniture</strong>, practical <strong>kitchen tables and chairs</strong>, as well as a large selection of <strong>carpets, rugs, flooring and blinds in Portlaoise</strong>.
-</p>
+        <p>
+          We stock a wide range of <strong>beds and mattresses in Portlaoise</strong>, along with comfortable <strong>sofas and seating</strong>, stylish <strong>wardrobes and bedroom furniture</strong>, practical <strong>kitchen tables and chairs</strong>, and a large selection of <strong>carpets, rugs, flooring and blinds in Portlaoise</strong>.
+        </p>
 
-<p>
-Whether you’re furnishing a new house, refreshing a room, choosing the perfect bed for a better night’s sleep, or finding the right carpet, rug, flooring or blind to finish a space — our experienced team is here to help you make the right choice.
-</p>
+        <p>
+          Whether you are furnishing a new home, updating a room, choosing the right bed for a better night’s sleep, or adding the finishing touches with carpet, flooring or blinds, our experienced team is here to help you make the right choice.
+        </p>
 
-<p>
-Reliable House Furnishers is a long-established furniture shop on Station Road in <strong>Portlaoise, Co. Laois</strong>. Since 1969 we have been helping customers across Portlaoise and the wider Laois area furnish their homes with quality furniture at fair prices.
-</p>
+        <p>
+          Based on Station Road, we have welcomed customers for generations from <strong>Portlaoise, Abbeyleix, Mountmellick, Portarlington</strong> and across the wider <strong>Co. Laois</strong> area.
+        </p>
 
-<p>
-Many of our customers come from across <strong>Portlaoise, Abbeyleix, Mountmellick, Portarlington and the wider Co. Laois area</strong> to visit our showroom on Station Road.
-</p>
+        <p class="tagline">Everything you need to make a house a home.</p>
 
-<p class="tagline">Everything you need to make a house a home.</p>
+        <div class="sectionIntro" style="margin-top:24px; text-align:center; background:#fafafa; border:1px solid var(--border);">
+          <h3 style="margin:0 0 10px;">Enjoyed your visit?</h3>
 
-<div class="sectionIntro" style="margin-top:18px; text-align:center;">
-<h3 style="margin:0 0 10px;">Enjoyed your visit?</h3>
+          <p style="margin:10px 0;">
+            If you have bought furniture, beds, carpets or blinds from us, we would really appreciate a quick Google review. It helps other people in Portlaoise find our local furniture store.
+          </p>
 
-<p style="margin:10px 0;">
-If you've bought furniture, beds, carpets or blinds from us, we’d really appreciate a quick Google review.
-It helps other people in Portlaoise find our local furniture store.
-</p>
+          <div class="btnRow" style="justify-content:center;">
+            <a class="btn btnPrimary"
+            href="https://g.page/r/CUT1eWwviC0cEBM/review"
+            target="_blank"
+            rel="noopener">
+            Leave a Google Review
+            </a>
+          </div>
+        </div>
 
-<div class="btnRow" style="justify-content:center;">
-<a class="btn btnPrimary"
-href="https://g.page/r/CUT1eWwviC0cEBM/review"
-target="_blank"
-rel="noopener">
-Leave a Google Review
-</a>
-</div>
-</div>
+        <p class="visit">
+          Visit us on <strong>Station Road, Portlaoise (R32 DA26)</strong> — your local destination for furniture, beds, carpets, flooring and blinds.
+        </p>
 
-<p class="visit">
-Visit us on <strong>Station Road, Portlaoise (R32 DA26)</strong> — your local destination for furniture, beds, carpets, flooring and blinds.
-</p>
+        <div class="btnRow" style="justify-content:center; margin-top:18px;">
+          <a class="btn btnSecondary" href="#" onclick="showSection('ourstory')">Our Story</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('beds')">Beds &amp; Mattresses</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('sofas')">Sofas &amp; Seating</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('kitchenfurniture')">Kitchen Furniture</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('bedroom')">Bedroom Furniture</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('wardrobes')">Wardrobes</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('carpets')">Carpets</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('rugs')">Rugs</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('flooring')">Flooring</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('blinds')">Blinds</a>
+          <a class="btn btnSecondary" href="#" onclick="showSection('gas')">Gas Cylinders</a>
+        </div>
 
-<div class="btnRow" style="justify-content:center; margin-top:18px;">
-<a class="btn btnSecondary" href="#" onclick="showSection('ourstory')">Our Story</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('beds')">Beds & Mattresses</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('sofas')">Sofas & Seating</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('kitchenfurniture')">Kitchen Furniture</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('bedroom')">Bedroom Furniture</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('wardrobes')">Wardrobes</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('carpets')">Carpets</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('rugs')">Rugs</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('flooring')">Flooring</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('blinds')">Blinds</a>
-<a class="btn btnSecondary" href="#" onclick="showSection('gas')">Gas Cylinders</a>
-</div>
-
-</article>
+      </article>
     </div>
   </section>
 
@@ -920,32 +954,6 @@ Visit us on <strong>Station Road, Portlaoise (R32 DA26)</strong> — your local 
       </div>
     </div>
   </section>
-  <div class="sectionIntro" style="max-width:860px; margin:30px auto;">
-  <h3>Furniture Shop in Portlaoise, Co. Laois</h3>
-
-  <p>
-    Reliable House Furnishers is a long-established furniture shop on Station Road in 
-    <strong>Portlaoise, Co. Laois</strong>. Since 1969 we have been helping customers across 
-    Portlaoise and the wider Laois area furnish their homes with quality furniture at 
-    fair prices.
-  </p>
-
-  <p>
-    In store you will find a wide range of 
-    <strong>beds and mattresses in Portlaoise</strong>, 
-    comfortable <strong>sofas and seating</strong>, 
-    stylish <strong>wardrobes and bedroom furniture</strong>, 
-    practical <strong>kitchen tables and chairs</strong>, 
-    as well as a large selection of 
-    <strong>carpets, rugs, flooring and blinds in Portlaoise</strong>.
-  </p>
-
-  <p>
-    Many of our customers come from across <strong>Portlaoise, Abbeyleix, Mountmellick, 
-    Portarlington and the wider Co. Laois area</strong> to visit our showroom on 
-    Station Road.
-  </p>
-</div>
 
 </main>
 
@@ -984,6 +992,7 @@ function bindLightbox(){
     if(img.dataset.lbBound) return;
     img.dataset.lbBound = "1";
     img.addEventListener("click",()=>{
+      if(img.classList.contains("homeHeroImg")) return;
       lightbox.style.display="flex";
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt || "Enlarged image";
@@ -1000,5 +1009,3 @@ lightbox.addEventListener("click",()=>{
 
 </body>
 </html>
-
-
