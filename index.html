@@ -445,6 +445,53 @@
     .founderBadge{ width:74px; height:74px; top:-10px; right:-8px; }
   }
 
+  .trustRow{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:14px 0 4px;
+  }
+  .trustBadge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:8px 16px;
+    font-size:.88rem;
+    font-weight:700;
+    color:var(--ink);
+    text-decoration:none;
+    box-shadow:var(--shadow);
+  }
+  .trustBadge .stars{ color:var(--brass); letter-spacing:1px; }
+  .trustBadge:hover{ border-color:var(--rust); }
+  .deliveryBadge{
+    background:var(--sage);
+    color:#fff;
+    border-color:var(--sage);
+  }
+
+  .testimonialGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:16px;
+    margin:24px 0;
+  }
+  .testimonialCard{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:18px;
+    text-align:left;
+  }
+  .testimonialCard .stars{ color:var(--brass); letter-spacing:2px; font-size:.95rem; margin-bottom:8px; display:block; }
+  .testimonialCard p{ font-size:.92rem; color:#4a3d31; margin:0 0 10px; font-style:italic; }
+  .testimonialCard .who{ font-weight:700; font-size:.85rem; color:var(--ink); font-style:normal; }
+
   .swatchStrip{
     background:var(--ink);
     border-radius:var(--radius);
@@ -673,6 +720,13 @@
 
         <h2>Furniture Store in Portlaoise — Serving Laois Since 1969</h2>
 
+        <div class="trustRow">
+          <a class="trustBadge" href="https://g.page/r/CUT1eWwviC0cEBM/review" target="_blank" rel="noopener">
+            <span class="stars">★★★★★</span> 4.6 Google Rating
+          </a>
+          <span class="trustBadge deliveryBadge">🚚 Free Delivery</span>
+        </div>
+
         <p>
           Welcome to <strong>Reliable House Furnishers</strong>, a <strong>family-run furniture store in Portlaoise, Co. Laois</strong>. Founded by Billy Rowan in 1969, we have been helping local families furnish their homes for over five decades with honest advice, fair prices and customer service you can trust.
         </p>
@@ -701,6 +755,27 @@
           <div class="sw" style="background:#6E4A2E;"></div>
           <div class="sw" style="background:#E4D9C7;"></div>
           <span class="swCaption">carpet, blind &amp; upholstery tones — in store on Station Road</span>
+        </div>
+
+        <h3 style="text-align:center; font-size:1.3rem; margin-bottom:2px;">What Portlaoise Customers Say</h3>
+        <p style="text-align:center; color:var(--muted); font-size:.9rem; margin-top:4px;">Real reviews from our Google listing</p>
+
+        <div class="testimonialGrid">
+          <div class="testimonialCard">
+            <span class="stars">★★★★★</span>
+            <p>"Great range of laminate flooring and the quality is excellent. The fitter did a fantastic job and the finish looks brilliant. Very happy with the result and would definitely recommend."</p>
+            <span class="who">— Liam Ryans</span>
+          </div>
+          <div class="testimonialCard">
+            <span class="stars">★★★★★</span>
+            <p>"Got a great deal from Nicola on two wardrobes. I was worried about getting them up my narrow, awkward stairs, but the delivery team stuck with it and got the job done. Friendly, enthusiastic service — I'll definitely buy from them again."</p>
+            <span class="who">— Fergal O'Brien</span>
+          </div>
+          <div class="testimonialCard">
+            <span class="stars">★★★★★</span>
+            <p>"Knowledgeable staff and the service received was excellent. Very happy with the quality of furniture we bought."</p>
+            <span class="who">— Alan Kealy</span>
+          </div>
         </div>
 
         <div class="sectionIntro" style="margin-top:24px; text-align:center;">
@@ -873,6 +948,7 @@
         with friendly, local advice from our team on Station Road.
       </p>
       <p><strong>Because when you sleep better, you live better.</strong></p>
+      <p style="color:var(--sage); font-weight:700;">🚚 Free delivery on beds and mattresses across Portlaoise and Co. Laois.</p>
     </div>
 
     <div class="galleryGrid">
@@ -903,6 +979,7 @@
       </p>
 
       <p><strong>Because the best moments at home start with a comfortable seat.</strong></p>
+      <p style="color:var(--sage); font-weight:700;">🚚 Free delivery on sofas and seating across Portlaoise and Co. Laois.</p>
     </div>
 
     <div class="galleryGrid">
@@ -1011,6 +1088,7 @@
         Our carpets are chosen for comfort, quality and long-lasting wear, helping to create rooms that feel warmer, quieter and more inviting.
       </p>
       <p><strong>Because sometimes, the finishing touch is the one you feel the most.</strong></p>
+      <p style="color:var(--sage); font-weight:700;">🚚 Free delivery on carpets across Portlaoise and Co. Laois.</p>
     </div>
 
     <div class="galleryGrid">
@@ -1130,6 +1208,8 @@
       <p class="seoNote" style="margin-top:10px;">
         Local furniture store in Portlaoise for beds, mattresses, sofas, carpets, rugs, flooring and blinds.
       </p>
+
+      <p style="color:var(--sage); font-weight:700; margin-top:10px;">🚚 We offer free delivery across Portlaoise and Co. Laois.</p>
 
       <p>
         <strong>Phone:</strong><br>
