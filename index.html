@@ -221,6 +221,7 @@
     text-align:center;
     display:inline-block;
     cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
   }
 
   nav a:hover, nav .navitem:hover .navlabel{ color:var(--rust-dark); border-bottom:3px solid var(--rust); }
@@ -241,6 +242,7 @@
     text-align:left;
   }
   .navitem:hover .navdropdown{ display:block; }
+  .navitem.open .navdropdown{ display:block; }
   .navdropdown a{
     display:block;
     padding:9px 12px;
@@ -267,18 +269,21 @@
     }
 
     nav{
-      flex-wrap:nowrap;
-      overflow-x:auto;
-      -webkit-overflow-scrolling:touch;
-      justify-content:flex-start;
+      flex-wrap:wrap;
+      overflow:visible;
+      justify-content:center;
       gap:4px;
       padding:6px 6px 8px;
       margin-top:14px;
     }
-    nav::-webkit-scrollbar{height:6px;}
     nav a, nav .navlabel{
       padding:10px 12px;
       font-size:14px;
+    }
+    .navdropdown{
+      left:50%;
+      transform:translateX(-50%);
+      min-width:220px;
     }
   }
 
@@ -1289,6 +1294,27 @@ function stopAllVideos(){
     v.currentTime = 0;
   });
 }
+
+/* Mobile-friendly dropdown nav: tap to open/close, since :hover doesn't exist on touch */
+document.querySelectorAll('.navitem').forEach(item=>{
+  const label = item.querySelector('.navlabel');
+  if(!label) return;
+  label.addEventListener('click', (e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.navitem.open').forEach(o=>o.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  });
+});
+document.addEventListener('click', ()=>{
+  document.querySelectorAll('.navitem.open').forEach(o=>o.classList.remove('open'));
+});
+document.querySelectorAll('.navdropdown a').forEach(a=>{
+  a.addEventListener('click', ()=>{
+    document.querySelectorAll('.navitem.open').forEach(o=>o.classList.remove('open'));
+  });
+});
 
 function showSection(id){
   stopAllVideos();
